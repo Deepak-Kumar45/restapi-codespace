@@ -1,17 +1,20 @@
 package com.spring.restapi_codespace.controllers;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class MainController {
     
-    @RequestMapping(path = {"/","/home"},method = RequestMethod.GET)
-    @ResponseBody
+    @GetMapping(path = {"/","/home"})
     public String home()
     {
         return "Home page";
+    }
+
+    @GetMapping("/home/services")
+    public String services()
+    {
+        return "services page under home page";
     }
 }
