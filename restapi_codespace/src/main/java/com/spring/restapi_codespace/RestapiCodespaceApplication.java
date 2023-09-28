@@ -8,7 +8,7 @@ public class RestapiCodespaceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RestapiCodespaceApplication.class, args);
-		System.out.println("\n\t\t!!..Application has been started..!!");
+		System.out.println("\n\t\t..Application has been started..");
 	}
 
 }

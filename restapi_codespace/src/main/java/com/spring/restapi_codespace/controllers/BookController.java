@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -54,11 +55,18 @@ public class BookController {
         } catch (Exception e) {
         }
         
-        if(existingBook!=null){
-            return "Book is already present with "+book.getBookid()+" Id";
-        }else{
+        if(existingBook==null)
+        {
             books.add(book);
-            return "Book has been sucessfully saved";
         }
+            
+            return "Book has been sucessfully saved with "+(books.indexOf(book).getBookid()+" ID";
     }
+
+    @DeleteMapping("/books/{id}")
+    public String deleteBook(@PathVariable("id") int bookid)
+    {
+
+    }
+
 }
