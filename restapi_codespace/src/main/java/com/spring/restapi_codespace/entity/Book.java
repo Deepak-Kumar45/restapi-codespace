@@ -17,5 +17,5 @@ public class Book {
     private int bookid;
     private String bookName;
     private int pageNo;
-    private Date lastupdated;    
+    private Date lastupdated;
 }
