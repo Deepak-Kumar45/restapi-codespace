@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.restapi_codespace.entity.Book;
 import com.spring.restapi_codespace.exceptionhandling.UserNotFoundException;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 @RestController
 public class BookController {
@@ -86,6 +88,13 @@ public class BookController {
         }else{
             return "No data is available with "+bookid+" ID";
         }
+    }
+
+    @PutMapping(value="books/{id}")
+    public Book putMethodName(@PathVariable("id") String bookid, @RequestBody Book book) {
+        System.out.println("Put mapping is callled");
+
+        return book;
     }
 
 }

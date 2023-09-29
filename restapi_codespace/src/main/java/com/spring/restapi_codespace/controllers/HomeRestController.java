@@ -44,5 +44,4 @@ public class HomeRestController {
         list.add(user);
         return "User has been added sucessfully at "+list.indexOf(user)+" index.";
     }
-    
 }
